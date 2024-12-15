@@ -2132,22 +2132,8 @@ textarea.form-input::-webkit-resizer { display: none; }
       transform: translateY(0); /* Vuelve al punto inicial */
     }
   }
-  
-  
-  .floating-avatar {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 80px;
-    height: 80px;
-    z-index: 1000;
-    animation: floating 3s ease-in-out infinite;
-  }
-  @media screen and (max-width: 768px) {
-    .floating-avatar {
-      display: none; /* Oculta el elemento */
-    }
-  }
+
+
  /* ---------------------------------------------- */
 
 /* Animación de desenfoque y aparición */
