@@ -2209,6 +2209,11 @@ body {
   animation: bounceIn 1s ease-out;
 }
 
+@media screen and (max-width: 768px) {
+  .floating-avatar {
+    display: none; /* Oculta el elemento */
+  }
+}
 
 
 }
