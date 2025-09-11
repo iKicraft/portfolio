@@ -165,3 +165,30 @@ h2{
   justify-content: center;
   border-top-right-radius: 20px; /* 🔹 Encabezado redondeado */
 }
+/* PRINT STYLES */
+@media print {
+  body {
+    background: #fff;
+  }
+  .cv-container {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  .left-column {
+    background: #2F5597 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .header {
+    background: #f4f6f8 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a {
+    color: #2F5597 !important;
+    text-decoration: none;
+  }
+}
