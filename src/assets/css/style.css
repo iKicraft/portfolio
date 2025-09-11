@@ -2219,7 +2219,17 @@ body {
 .sidebar-info_more::-webkit-scrollbar-track {
   background: transparent;
 }
-
-
-
+/* Sidebar con scroll interno sin mostrar la barra */
+.sidebar-info_more {
+  max-height: 60vh;                 /* Altura máxima: 60% de pantalla */
+  overflow-y: auto;                 /* Habilita scroll vertical */
+  padding-right: 8px;               /* Evita cortar contenido */
+  -webkit-overflow-scrolling: touch;/* Scroll suave en móviles */
+  scrollbar-width: none;            /* Oculta scrollbar en Firefox */
 }
+
+/* Ocultar scrollbar en navegadores WebKit (Chrome, Safari, Edge) */
+.sidebar-info_more::-webkit-scrollbar {
+  display: none;
+}
+
