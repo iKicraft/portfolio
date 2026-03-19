@@ -2553,27 +2553,6 @@ textarea.form-input::-webkit-resizer {
   }
 }
 
-/* Proyectos Destacados - grid extra small tweaks for responsiveness */
-.projects-destacados { padding: 8px 0; }
-.projects-destacados-title { text-align: center; }
-.project-dest-grid { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 0 12px; }
-.project-dest-item { display: block; text-decoration: none; color: inherit; background: var(--eerie-black-1); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-2); }
-.project-dest-item img { width: 100%; height: 150px; object-fit: cover; display: block; }
-.project-dest-caption { padding: 8px 12px; font-size: var(--fs-6); }
-@media (min-width: 768px) {
-  .project-dest-grid { grid-template-columns: repeat(3, 1fr); }
-  .project-dest-item { transition: transform 0.3s ease; }
-  .project-dest-item:hover { transform: scale(1.03); }
-}
-
-/* Timeline accessibility */
-.timeline { padding: 8px 0; }
-.timeline-title { text-align: center; color: var(--white-2); }
-.timeline-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; max-width: 800px; margin-left: auto; margin-right: auto; }
-.timeline-item { padding: 0 6px; }
-.timeline-item-title { font-weight: 500; color: var(--white-2); display: block; }
-.timeline-text { color: var(--light-gray); font-size: var(--fs-6); }
-
 
 /* Mobile improvements for better readability and layout */
 @media (max-width: 1024px) {

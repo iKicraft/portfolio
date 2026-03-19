@@ -201,7 +201,7 @@
         - #NAVBAR
       -->
 
-       <nav class="navbar" aria-label="Navegación principal">
+      <nav class="navbar">
 
         <ul class="navbar-list">
 
@@ -216,10 +216,6 @@
         </ul>
 
       </nav>
-      <!-- CTA CV para recruiters -->
-      <div class="cta-bar" role="region" aria-label="Descargar Curriculum" style="text-align:center; margin: 8px 0;">
-        <a href="../CV.pdf" download class="form-btn" aria-label="Descargar CV en PDF">Descargar CV</a>
-      </div>
 
 
 
@@ -239,44 +235,6 @@
           <p>
             Experiencia profesional: Ingeniero de software con foco principal en .NET (C#, ASP.NET Core). Desarrollo de soluciones web y servicios para aplicaciones empresariales, con experiencia en bases de datos SQL Server, APIs REST y arquitecturas escalables.
           </p>
-        </section>
-        <!-- Timeline de experiencia -->
-        <section class="timeline" aria-label="Línea de tiempo de experiencia">
-          <h3 class="h3 timeline-title" style="text-align:center;">Experiencia - Línea de tiempo</h3>
-          <ul class="timeline-list" style="max-width:800px; margin:0 auto;">
-            <li class="timeline-item">
-              <span class="timeline-item-title">Actualidad: Desarrollador .NET (C#, ASP.NET Core)</span>
-              <span class="timeline-text">Stack: C#, ASP.NET Core, EF Core, SQL Server; APIs REST; Azure. Enfoque en soluciones empresariales robustas y escalables.</span>
-            </li>
-            <li class="timeline-item">
-              <span class="timeline-item-title">Proyectos web y backend</span>
-              <span class="timeline-text">Stack: .NET, JavaScript, APIs, SQL; mejoras de rendimiento y mantenimiento de sistemas existentes.</span>
-            </li>
-          </ul>
-        </section>
-        <!-- Proyectos Destacados -->
-        <section class="projects-destacados" aria-label="Proyectos destacados">
-          <h3 class="h3 projects-destacados-title" style="text-align:center; color:var(--white-2);">Proyectos Destacados</h3>
-          <div class="project-dest-grid" style="display:grid; grid-template-columns:1fr; gap:20px; padding:0 12px;">
-            <a class="project-dest-item" href="https://sgchch.org" target="_blank" aria-label="SGCHCH - Gestión aeroportuaria">
-              <img class="project-dest-img" src="./assets/images/sgchch.png" alt="SGCHCH">
-              <div class="project-dest-caption" style="padding:10px;">
-                <strong>SGCHCH</strong><br>Gestión aeroportuaria
-              </div>
-            </a>
-            <a class="project-dest-item" href="https://tallereasy.com" target="_blank" aria-label="Taller EASY">
-              <img class="project-dest-img" src="./assets/images/tallereasy.png" alt="Taller Easy">
-              <div class="project-dest-caption" style="padding:10px;">
-                <strong>Taller EASY</strong><br>Sistema web para talleres
-              </div>
-            </a>
-            <a class="project-dest-item" href="https://csddelfin.com.uy" target="_blank" aria-label="CS DELFÍN">
-              <img class="project-dest-img" src="./assets/images/csdelfin.png" alt="CS DELFÍN">
-              <div class="project-dest-caption" style="padding:10px;">
-                <strong>CS DELFÍN</strong><br>Club deportivo de Fray Bentos
-              </div>
-            </a>
-          </div>
         </section>
 
         <header>
@@ -651,7 +609,7 @@
         <!-- Pop-up Modal -->
         <div id="project-modal" class="modal">
           <div class="modal-content">
-            <button class="close-btn" aria-label="Cerrar">&times;</button>
+            <span class="close-btn">&times;</span>
             <img id="modal-img" src="" alt="Project Image">
             <h4 id="modal-title">Título del Proyecto</h4>
             <p id="modal-info">Descripción del proyecto...</p>
@@ -683,16 +641,16 @@
 
           <h3 class="h3 form-title">Formulario de contacto</h3>
 
-        <form action="#" class="form" data-form aria-label="Formulario de contacto">
+          <form action="#" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" name="fullname" class="form-input" placeholder="Nombre completo" required
-                data-form-input aria-label="Nombre completo">
+                data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email" required data-form-input aria-label="Email">
+              <input type="email" name="email" class="form-input" placeholder="Email" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Mensaje" required data-form-input aria-label="Mensaje"></textarea>
+            <textarea name="message" class="form-input" placeholder="Mensaje" required data-form-input></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
