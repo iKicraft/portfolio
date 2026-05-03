@@ -155,3 +155,55 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	}
 });
+
+// Brief tremble effect every ~3 seconds on avatar, skills, services, and projects
+document.addEventListener("DOMContentLoaded", function () {
+  const avatar = document.querySelector('.avatar-box img');
+  const skillCards = document.querySelectorAll('.skills-item .content-card');
+  const serviceCards = document.querySelectorAll('.service-item .content-card');
+  const projectItems = document.querySelectorAll('.clients-item');
+  const shakeClasses = ['shake-1', 'shake-2', 'shake-3', 'shake-4'];
+
+  function applyShake(el, index) {
+    if (!el) return;
+    const cls = shakeClasses[index % shakeClasses.length];
+    el.classList.add(cls);
+    const onEnd = function () {
+      el.classList.remove(cls);
+      el.removeEventListener('animationend', onEnd);
+    };
+    el.addEventListener('animationend', onEnd);
+  }
+
+  function cycleShake() {
+    // Build potential targets
+    const targets = [];
+    if (avatar) targets.push({ type: 'avatar', el: avatar });
+    if (skillCards && skillCards.length) targets.push({ type: 'skills', els: Array.from(skillCards) });
+    if (serviceCards && serviceCards.length) targets.push({ type: 'services', els: Array.from(serviceCards) });
+    if (projectItems && projectItems.length) targets.push({ type: 'projects', els: Array.from(projectItems) });
+
+    // Shuffle targets to randomize which groups animate
+    for (let i = targets.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [targets[i], targets[j]] = [targets[j], targets[i]];
+    }
+
+    const groupsToShake = Math.random() < 0.6 ? 1 : 2; // 60% chance to shake 1 group, 40% to shake 2
+    for (let i = 0; i < groupsToShake && i < targets.length; i++) {
+      const g = targets[i];
+      if (g.el) {
+        const idx = Math.floor(Math.random() * shakeClasses.length);
+        applyShake(g.el, idx);
+      } else if (g.els && g.els.length) {
+        const el = g.els[Math.floor(Math.random() * g.els.length)];
+        const idx = Math.floor(Math.random() * shakeClasses.length);
+        applyShake(el, idx);
+      }
+    }
+  }
+
+  // Initial delay before first tremble, then every 3 seconds
+  setTimeout(cycleShake, 1200);
+  setInterval(cycleShake, 3000);
+});
