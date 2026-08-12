@@ -2520,31 +2520,6 @@ textarea.form-input::-webkit-resizer {
     animation: bounceIn 1s ease-out;
   }
 
-  /* Sidebar con scroll interno */
-  .sidebar-info_more {
-    max-height: 60vh;
-    /* ocupa hasta el 60% de la pantalla */
-    overflow-y: auto;
-    /* activa scroll vertical solo dentro */
-    padding-right: 8px;
-    /* espacio para que no tape el scrollbar */
-  }
-
-  /* Scrollbar personalizado (opcional, para que quede más elegante) */
-  .sidebar-info_more::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  .sidebar-info_more::-webkit-scrollbar-thumb {
-    background: #4472C4;
-    /* color del scroll */
-    border-radius: 3px;
-  }
-
-  .sidebar-info_more::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
   /* Sidebar con scroll interno sin mostrar la barra */
   .sidebar-info_more {
     max-height: 60vh;
