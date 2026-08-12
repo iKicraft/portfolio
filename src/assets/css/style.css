@@ -446,7 +446,8 @@ main {
 }
 
 .sidebar.active {
-  max-height: 405px;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .sidebar-info {
@@ -1536,6 +1537,16 @@ main {
   margin-bottom: 10px;
 }
 
+.contact-cta-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-cta-list .form-btn {
+  text-transform: none;
+}
+
 .form-title {
   margin-bottom: 20px;
 }
@@ -1752,7 +1763,8 @@ textarea.form-input::-webkit-resizer {
   }
 
   .sidebar.active {
-    max-height: 584px;
+    max-height: 90vh;
+    overflow-y: auto;
   }
 
   .sidebar-info {
@@ -2557,7 +2569,7 @@ textarea.form-input::-webkit-resizer {
 /* Mobile improvements for better readability and layout */
 @media (max-width: 1024px) {
   main { display: block; }
-  .sidebar { max-height: none; height: auto; width: 100%; }
+  .sidebar { width: 100%; }
   .main-content { width: 100%; margin: 0; padding: 0 8px; }
 }
 
