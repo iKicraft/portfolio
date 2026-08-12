@@ -209,6 +209,12 @@
             <button class="navbar-link active" data-nav-link>Sobre mí</button>
           </li>
           <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resumen</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Proyectos</button>
+          </li>
+          <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contacto</button>
           </li>
 
@@ -225,17 +231,7 @@
         - #ABOUT
       -->
 
-      <article class="about  active" data-page="sobre mí">
-
-        <header>
-          <h2 class="h2 article-title">Experiencia</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            Experiencia profesional: Desarrollador de software con foco principal en .NET (C#, ASP.NET Core). Desarrollo de soluciones web y servicios para aplicaciones empresariales, con experiencia en bases de datos SQL Server, APIs REST y arquitecturas escalables.
-          </p>
-        </section>
+      <article class="about active" data-page="sobre mí">
 
         <header>
           <h2 class="h2 article-title">Sobre mí</h2>
@@ -328,13 +324,67 @@
 
         </section>
 
+      </article>
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resumen">
+
+        <header>
+          <h2 class="h2 article-title">Experiencia</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Experiencia profesional: Desarrollador de software con foco principal en .NET (C#, ASP.NET Core). Desarrollo de soluciones web y servicios para aplicaciones empresariales, con experiencia en bases de datos SQL Server, APIs REST y arquitecturas escalables.
+          </p>
+        </section>
+
 
         <!--
           - skills
         -->
         <section class="skills">
           <h3 class="h3 skills-title">Habilidades</h3>
-      <ul class="skills-list">
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="content-card">
+                <img src="./assets/icons/CSharp.png" alt="CSharp Logo" class="skills-logo">
+                <div class="skills-details">
+                  <h4 class="h4 skills-item-title">C#</h4>
+                  <p class="skills-years"></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="content-card">
+                <img src="./assets/icons/asp.png" alt="ASP.NET Logo" class="skills-logo">
+                <div class="skills-details">
+                  <h4 class="h4 skills-item-title">ASP.NET</h4>
+                  <p class="skills-years"></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="content-card">
+                <img src="./assets/icons/mssql.svg" alt="Microsoft SQL Server Logo" class="skills-logo">
+                <div class="skills-details">
+                  <h4 class="h4 skills-item-title">Microsoft SQL Server</h4>
+                  <p class="skills-years"></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="content-card">
+                <img src="./assets/icons/flutter.svg" alt="Flutter Logo" class="skills-logo">
+                <div class="skills-details">
+                  <h4 class="h4 skills-item-title">Flutter</h4>
+                  <p class="skills-years"></p>
+                </div>
+              </div>
+            </li>
             <li class="skills-item">
               <div class="content-card">
                 <img src="./assets/icons/html.png" alt="HTML Logo" class="skills-logo">
@@ -364,24 +414,6 @@
             </li>
             <li class="skills-item">
               <div class="content-card">
-                <img src="./assets/icons/vb.png" alt="Visual Basic Logo" class="skills-logo">
-                <div class="skills-details">
-                  <h4 class="h4 skills-item-title">Visual Basic</h4>
-                  <p class="skills-years"></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="content-card">
-                <img src="./assets/icons/asp.png" alt="ASP.NET Logo" class="skills-logo">
-                <div class="skills-details">
-                  <h4 class="h4 skills-item-title">ASP.NET</h4>
-                  <p class="skills-years"></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="content-card">
                 <img src="./assets/icons/Bootstrap.png" alt="Bootstrap Logo" class="skills-logo">
                 <div class="skills-details">
                   <h4 class="h4 skills-item-title">Bootstrap</h4>
@@ -394,6 +426,15 @@
                 <img src="./assets/icons/tailwindcss.svg" alt="Tailwind CSS Logo" class="skills-logo">
                 <div class="skills-details">
                   <h4 class="h4 skills-item-title">Tailwind CSS</h4>
+                  <p class="skills-years"></p>
+                </div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="content-card">
+                <img src="./assets/icons/mysql.png" alt="MySQL Logo" class="skills-logo">
+                <div class="skills-details">
+                  <h4 class="h4 skills-item-title">MySQL</h4>
                   <p class="skills-years"></p>
                 </div>
               </div>
@@ -436,154 +477,15 @@
             </li>
             <li class="skills-item">
               <div class="content-card">
-                <img src="./assets/icons/mysql.png" alt="MySQL Logo" class="skills-logo">
+                <img src="./assets/icons/vb.png" alt="Visual Basic Logo" class="skills-logo">
                 <div class="skills-details">
-                  <h4 class="h4 skills-item-title">MySQL</h4>
-                  <p class="skills-years"></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="content-card">
-                <img src="./assets/icons/mssql.svg" alt="Microsoft SQL Server Logo" class="skills-logo">
-                <div class="skills-details">
-                  <h4 class="h4 skills-item-title">Microsoft SQL Server</h4>
-                  <p class="skills-years"></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="content-card">
-                <img src="./assets/icons/CSharp.png" alt="CSharp Logo" class="skills-logo">
-                <div class="skills-details">
-                  <h4 class="h4 skills-item-title">C#</h4>
-                  <p class="skills-years"></p>
-                </div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="content-card">
-                <img src="./assets/icons/flutter.svg" alt="Flutter Logo" class="skills-logo">
-                <div class="skills-details">
-                  <h4 class="h4 skills-item-title">Flutter</h4>
+                  <h4 class="h4 skills-item-title">Visual Basic</h4>
                   <p class="skills-years"></p>
                 </div>
               </div>
             </li>
           </ul>
         </section>
-
-
-        <!--
-          - certifications
-        -->
-        <section class="certifications">
-          <h3 class="h3 skills-title">Certificaciones</h3>
-          <ul class="certifications-list">
-
-            <li class="certifications-item">
-              <div class="content-card cert-card">
-                <div class="cert-left">
-                  <img src="./assets/icons/googlecloud.png" alt="Google Cloud Logo" class="cert-logo">
-                  <div class="skills-details">
-                    <h4 class="h4 certifications-item-title">Applying AI Principles With Google Cloud</h4>
-                    <p class="cert-date">Julio 2025</p>
-                  </div>
-                </div>
-                <div class="cert-right">
-                  <img src="./assets/certs/applying-ai.png" alt="Badge Applying AI" class="cert-badge">
-                </div>
-              </div>
-              <br>
-            </li>
-
-            <li class="certifications-item">
-              <div class="content-card cert-card">
-                <div class="cert-left">
-                  <img src="./assets/icons/googlecloud.png" alt="Google Cloud Logo" class="cert-logo">
-                  <div class="skills-details">
-                    <h4 class="h4 certifications-item-title">Prompt Design in Vertex AI</h4>
-                    <p class="cert-date">Julio 2025</p>
-                  </div>
-                </div>
-                <div class="cert-right">
-                  <img src="./assets/certs/prompt-design.png" alt="Badge Prompt Design" class="cert-badge">
-                </div>
-              </div>
-              <br>
-            </li>
-
-            <li class="certifications-item">
-              <div class="content-card cert-card">
-                <div class="cert-left">
-                  <img src="./assets/icons/googlecloud.png" alt="Google Cloud Logo" class="cert-logo">
-                  <div class="skills-details">
-                    <h4 class="h4 certifications-item-title">Introduction To Responsible AI</h4>
-                    <p class="cert-date">Julio 2025</p>
-                  </div>
-                </div>
-                <div class="cert-right">
-                  <img src="./assets/certs/responsible-ai.png" alt="Badge Responsible AI" class="cert-badge">
-                </div>
-              </div>
-              <br>
-            </li>
-
-            <li class="certifications-item">
-              <div class="content-card cert-card">
-                <div class="cert-left">
-                  <img src="./assets/icons/googlecloud.png" alt="Google Cloud Logo" class="cert-logo">
-                  <div class="skills-details">
-                    <h4 class="h4 certifications-item-title">Introduction To Large Language Models</h4>
-                    <p class="cert-date">Julio 2025</p>
-                  </div>
-                </div>
-                <div class="cert-right">
-                  <img src="./assets/certs/llm.png" alt="Badge Large Language Models" class="cert-badge">
-                </div>
-              </div>
-              <br>
-            </li>
-
-            <li class="certifications-item">
-              <div class="content-card cert-card">
-                <div class="cert-left">
-                  <img src="./assets/icons/googlecloud.png" alt="Google Cloud Logo" class="cert-logo">
-                  <div class="skills-details">
-                    <h4 class="h4 certifications-item-title">Introduction To Generative AI</h4>
-                    <p class="cert-date">Julio 2025</p>
-                  </div>
-                </div>
-                <div class="cert-right">
-                  <img src="./assets/certs/gen-ai.png" alt="Badge Generative AI" class="cert-badge">
-                </div>
-              </div>
-              <br>
-            </li>
-
-            <li class="certifications-item">
-              <div class="content-card cert-card">
-                <div class="cert-left">
-                  <img src="./assets/icons/googlecloud.png" alt="Google Cloud Logo" class="cert-logo">
-                  <div class="skills-details">
-                    <h4 class="h4 certifications-item-title">
-                      Google Cloud Computing Foundations: Data, ML, and AI
-                    </h4>
-                    <p class="cert-date">Junio 2025</p>
-                  </div>
-                </div>
-                <div class="cert-right">
-                  <img src="./assets/certs/cloud-foundations.png" alt="Badge Cloud Foundations" class="cert-badge">
-                </div>
-              </div>
-              <br>
-            </li>
-
-          </ul>
-        </section>
-
-
-
 
 
         <section class="skills">
@@ -628,13 +530,23 @@
           </ul>
         </section>
 
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="proyectos">
+
+        <header>
+          <h2 class="h2 article-title">Proyectos</h2>
+        </header>
 
         <!--
                   - clients
         -->
 
         <section class="clients">
-          <h3 class="h3 clients-title">Proyectos</h3>
 
           <ul class="clients-list has-scrollbar">
 
