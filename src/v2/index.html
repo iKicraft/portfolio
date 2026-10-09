@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="is-loading">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enzo Botta — Portfolio</title>
+  <meta name="description" content="Portfolio de Enzo Botta: Desarrollador Full Stack (.NET) y de Apps Móviles (Flutter). Un recorrido por mis proyectos.">
+  <meta name="theme-color" content="#06030d">
+  <!-- Versión en pruebas: no indexar mientras convive con el portfolio clásico -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="../assets/images/logo.ico" type="image/x-icon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- Fondo vivo (canvas) + textura -->
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+
+  <!-- Cursor personalizado -->
+  <div class="cursor" aria-hidden="true"><i class="cursor__dot"></i><i class="cursor__ring"></i></div>
+
+  <!-- Preloader -->
+  <div class="pre" aria-hidden="true">
+    <div class="pre__inner">
+      <span class="pre__label">Enzo Botta — Portfolio</span>
+      <span class="pre__num">000</span>
+      <span class="pre__bar"><i></i></span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#hero" class="nav__logo" data-hover aria-label="Inicio">
+      <img src="../assets/images/logo.svg" alt="" width="34" height="34">
+    </a>
+    <nav class="nav__pill" aria-label="Principal">
+      <a href="#hero" data-nav="hero" data-hover>Inicio</a>
+      <a href="#sobre" data-nav="sobre" data-hover>Sobre mí</a>
+      <a href="#proyectos" data-nav="proyectos" data-hover>Proyectos</a>
+      <a href="#stack" data-nav="stack" data-hover>Stack</a>
+      <a href="#contacto" data-nav="contacto" data-hover>Contacto</a>
+    </nav>
+    <a href="../index.html" class="nav__classic" data-hover>Versión clásica ↗</a>
+    <button class="nav__burger" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-btn>
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Menú móvil -->
+  <div class="menu" data-menu>
+    <a href="#hero">Inicio</a>
+    <a href="#sobre">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#stack">Stack</a>
+    <a href="#contacto">Contacto</a>
+    <a href="../index.html" class="menu__classic">Versión clásica ↗</a>
+  </div>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+
+      <div class="hero__top">
+        <span class="eyebrow">Portfolio ’26</span>
+        <span class="eyebrow">Paysandú, Uruguay</span>
+      </div>
+
+      <div class="hero__center">
+        <h1 class="hero__title" data-tilt>
+          <span class="line line--solid" data-split>Enzo</span>
+          <span class="line line--grad" data-split>Botta</span>
+        </h1>
+
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs>
+              <path id="ring" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0" />
+            </defs>
+            <text>
+              <textPath href="#ring" textLength="498" lengthAdjust="spacing">DESARROLLADOR FULL STACK • .NET • FLUTTER • WEB •</textPath>
+            </text>
+          </svg>
+          <img src="../assets/images/my-avatar.png" alt="" width="120" height="120">
+        </div>
+
+        <p class="hero__role">
+          <span class="hero__role-pre">Creo</span>
+          <span class="hero__role-swap">
+            <span>sistemas web.</span>
+            <span>apps móviles.</span>
+            <span>apps de escritorio.</span>
+            <span>soluciones en .NET.</span>
+          </span>
+        </p>
+      </div>
+
+      <div class="hero__bottom">
+        <a href="#sobre" class="scrollcue" data-hover>
+          <span class="scrollcue__line"></span>
+          <span>Scrolleá</span>
+        </a>
+        <div class="mq mq--small" data-marquee="40" data-dir="-1" aria-hidden="true">
+          <div class="mq__group">
+            <span>C#</span><span>ASP.NET</span><span>Blazor</span><span>SQL Server</span><span>Flutter</span><span>Electron</span><span>React</span><span>Next.js</span><span>MySQL</span><span>Tailwind</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ===================== MANIFIESTO ===================== -->
+    <section class="manifesto" id="sobre">
+      <div class="manifesto__inner">
+        <p class="eyebrow">( 01 — Sobre mí )</p>
+        <p class="manifesto__text" data-words>
+          Convierto ideas en <em>software robusto</em>, eficiente y escalable. Escribo <em>código limpio</em>, aprendo sin parar y busco que cada proyecto aporte <em>valor real</em>.
+        </p>
+        <p class="manifesto__sub">
+          Desarrollador especializado en .NET. Analítico, autodidacta y comprometido con la calidad. Y sí, el café es parte del equipo. ☕
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== NÚMEROS ===================== -->
+    <section class="stats" aria-label="En números">
+      <div class="stat" data-reveal>
+        <span class="stat__n" data-count="8">00</span>
+        <span class="stat__l">Proyectos</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__n" data-count="3">00</span>
+        <span class="stat__l">Plataformas: web, escritorio y móvil</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__n" data-count="19">00</span>
+        <span class="stat__l">Tecnologías</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat__n stat__n--inf">∞</span>
+        <span class="stat__l">Cafés ☕</span>
+      </div>
+    </section>
+
+    <!-- ===================== QUÉ HAGO ===================== -->
+    <section class="services" id="servicios">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>( 02 — Qué hago )</p>
+        <h2 class="h-xl" data-chars>Qué hago</h2>
+
+        <ul class="svc-list">
+          <li class="svc" data-reveal data-hover>
+            <span class="svc__n">01</span>
+            <h3 class="svc__t">Diseño web</h3>
+            <p class="svc__d">Interfaces modernas y cuidadas, pensadas para que se vean bien y se usen mejor.</p>
+            <span class="svc__a" aria-hidden="true">↗</span>
+          </li>
+          <li class="svc" data-reveal data-hover>
+            <span class="svc__n">02</span>
+            <h3 class="svc__t">Desarrollo web</h3>
+            <p class="svc__d">Sitios y sistemas web a nivel profesional, desde la base de datos hasta la pantalla.</p>
+            <span class="svc__a" aria-hidden="true">↗</span>
+          </li>
+          <li class="svc" data-reveal data-hover>
+            <span class="svc__n">03</span>
+            <h3 class="svc__t">Apps de escritorio</h3>
+            <p class="svc__d">Aplicaciones para Windows: desde utilidades hasta sistemas de gestión completos.</p>
+            <span class="svc__a" aria-hidden="true">↗</span>
+          </li>
+          <li class="svc" data-reveal data-hover>
+            <span class="svc__n">04</span>
+            <h3 class="svc__t">Apps móviles</h3>
+            <p class="svc__d">Aplicaciones móviles multiplataforma con Flutter.</p>
+            <span class="svc__a" aria-hidden="true">↗</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS: EL RECORRIDO ===================== -->
+    <section class="tunnel" id="proyectos" aria-label="Proyectos">
+
+      <div class="tunnel__fx" aria-hidden="true">
+        <div class="floor"><div class="floor__grid"></div></div>
+        <div class="rings">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+
+      <!-- Intro -->
+      <article class="scene scene--intro" data-hue="272">
+        <div class="scene__intro">
+          <p class="eyebrow">( 03 — Proyectos )</p>
+          <h2 class="scene__big">El<br><span class="grad">viaje</span></h2>
+          <p class="scene__lead">Ocho proyectos, ocho mundos. Scrolleá para volar a través de ellos.</p>
+          <span class="scene__hint" aria-hidden="true">↓</span>
+        </div>
+      </article>
+
+      <!-- 01 HeroicaPlast -->
+      <article class="scene" data-hue="275" data-title="HeroicaPlast">
+        <span class="scene__ghost" aria-hidden="true">01</span>
+        <div class="scene__tilt">
+          <div class="scene__card">
+            <div class="scene__media">
+              <div class="tile" style="--tile:#2563eb"><img src="../assets/images/heroicaplast.png" alt="Logo de HeroicaPlast" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="scene__body">
+              <span class="pill">App de escritorio</span>
+              <h3 class="scene__title">HeroicaPlast</h3>
+              <p class="scene__text">Aplicación de escritorio para gestionar un negocio completo: control de ventas, caja, artículos, stock y clientes, con gráficas interactivas y más.</p>
+              <ul class="chips"><li>Electron</li><li>React</li><li>Tailwind</li><li>SQLite</li></ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Cocheras Carrasco -->
+      <article class="scene" data-hue="302" data-title="Cocheras Carrasco">
+        <span class="scene__ghost" aria-hidden="true">02</span>
+        <div class="scene__tilt">
+          <div class="scene__card">
+            <div class="scene__media">
+              <div class="tile" style="--tile:#262626"><img src="../assets/images/cocheras.jpeg" alt="Logo de Cocheras Carrasco" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="scene__body">
+              <span class="pill">Aplicación web</span>
+              <h3 class="scene__title">Cocheras Carrasco</h3>
+              <p class="scene__text">Aplicación web mobile first para la gestión integral de reservas de cocheras del aeropuerto: agenda, servicios, caja, usuarios, marcas y más.</p>
+              <ul class="chips"><li>Blazor Server</li><li>MySQL 8</li><li>Mobile first</li></ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 SGCHCH -->
+      <article class="scene" data-hue="256" data-title="SGCHCH">
+        <span class="scene__ghost" aria-hidden="true">03</span>
+        <div class="scene__tilt">
+          <div class="scene__card">
+            <div class="scene__media">
+              <div class="tile" style="--tile:#ffffff"><img src="../assets/images/sgchch.png" alt="Logo de SGCHCH" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="scene__body">
+              <span class="pill">Sistema de gestión</span>
+              <h3 class="scene__title">SGCHCH</h3>
+              <p class="scene__text">Sistema de gestión para el aeropuerto de Paysandú.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 Taller Easy -->
+      <article class="scene" data-hue="322" data-title="Taller Easy">
+        <span class="scene__ghost" aria-hidden="true">04</span>
+        <div class="scene__tilt">
+          <div class="scene__card">
+            <div class="scene__media">
+              <div class="tile" style="--tile:#04202e"><img src="../assets/images/tallereasy.png" alt="Logo de Taller Easy" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="scene__body">
+              <span class="pill">Sistema web</span>
+              <h3 class="scene__title">Taller Easy</h3>
+              <p class="scene__text">Sistema web para talleres de vehículos.</p>
+              <a class="btn" href="https://tallereasy.com" target="_blank" rel="noopener" data-hover>Visitar sitio <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 SHOTMAKER -->
+      <article class="scene" data-hue="285" data-title="SHOTMAKER">
+        <span class="scene__ghost" aria-hidden="true">05</span>
+        <div class="scene__tilt">
+          <div class="scene__card">
+            <div class="scene__media">
+              <div class="tile" style="--tile:#0f0a1f"><img src="../assets/images/shotmaker.png" alt="Logo de SHOTMAKER" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="scene__body">
+              <span class="pill">App de Windows</span>
+              <h3 class="scene__title">SHOTMAKER</h3>
+              <p class="scene__text">Aplicación de Windows para capturas de pantalla: selección de área, anotaciones, colores, flechas y recuadros. Incluye una función destacada para copiar el texto que aparece en pantalla, por ejemplo extrayéndolo de una imagen.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 CS Delfín -->
+      <article class="scene" data-hue="334" data-title="CS Delfín">
+        <span class="scene__ghost" aria-hidden="true">06</span>
+        <div class="scene__tilt">
+          <div class="scene__card">
+            <div class="scene__media">
+              <div class="tile" style="--tile:#10244f"><img src="../assets/images/csdelfin.png" alt="Logo de CS Delfín" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="scene__body">
+              <span class="pill">Sistema web</span>
+              <h3 class="scene__title">CS Delfín</h3>
+              <p class="scene__text">Sistema para el club deportivo de Fray Bentos: control de socios, cuotas, productos y ventas.</p>
+              <a class="btn" href="https://csddelfin.com.uy" target="_blank" rel="noopener" data-hover>Visitar sitio <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 07 clubEASY -->
+      <article class="scene" data-hue="262" data-title="clubEASY">
+        <span class="scene__ghost" aria-hidden="true">07</span>
+        <div class="scene__tilt">
+          <div class="scene__card">
+            <div class="scene__media">
+              <div class="tile" style="--tile:#ffffff"><img src="../assets/images/clubeasy-logo.png" alt="Logo de clubEASY" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="scene__body">
+              <span class="pill">Sistema de gestión</span>
+              <h3 class="scene__title">clubEASY</h3>
+              <p class="scene__text">Sistema de gestión para clubes: control de socios, cuotas, actividades y comunicaciones en un solo lugar.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 08 autoEASY -->
+      <article class="scene" data-hue="312" data-title="autoEASY">
+        <span class="scene__ghost" aria-hidden="true">08</span>
+        <div class="scene__tilt">
+          <div class="scene__card">
+            <div class="scene__media">
+              <div class="tile" style="--tile:#ffffff"><img src="../assets/images/autoeasy-logo.png" alt="Logo de autoEASY" loading="lazy" decoding="async"></div>
+            </div>
+            <div class="scene__body">
+              <span class="pill">Sistema de gestión</span>
+              <h3 class="scene__title">autoEASY</h3>
+              <p class="scene__text">Sistema de gestión para automotoras: stock de vehículos, ventas, clientes y seguimiento comercial.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- HUD -->
+      <aside class="hud" aria-label="Navegación de proyectos">
+        <ol class="hud__list"></ol>
+        <div class="hud__count" aria-hidden="true"><b>00</b><span>/ 08</span></div>
+        <div class="hud__bar" aria-hidden="true"><i></i></div>
+      </aside>
+
+    </section>
+
+    <!-- ===================== STACK ===================== -->
+    <section class="stack" id="stack">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>( 04 — Stack )</p>
+        <h2 class="h-xl" data-chars>Mi stack</h2>
+
+        <div class="bento">
+
+          <article class="card card--3" data-reveal data-spot>
+            <h3 class="card__t">Backend y datos</h3>
+            <ul class="chips chips--ic">
+              <li><i class="ic"><img src="../assets/icons/CSharp.png" alt="" loading="lazy"></i>C#</li>
+              <li><i class="ic"><img src="../assets/icons/asp.png" alt="" loading="lazy"></i>ASP.NET</li>
+              <li><i class="ic"><img src="../assets/icons/mssql.svg" alt="" loading="lazy"></i>SQL Server</li>
+              <li><i class="ic"><img src="../assets/icons/mysql.png" alt="" loading="lazy"></i>MySQL</li>
+              <li><i class="ic"><img src="../assets/icons/php.png" alt="" loading="lazy"></i>PHP</li>
+              <li><i class="ic"><img src="../assets/icons/python.png" alt="" loading="lazy"></i>Python</li>
+              <li><i class="ic"><img src="../assets/icons/vb.png" alt="" loading="lazy"></i>Visual Basic</li>
+            </ul>
+          </article>
+
+          <article class="card card--3" data-reveal data-spot>
+            <h3 class="card__t">Frontend</h3>
+            <ul class="chips chips--ic">
+              <li><i class="ic"><img src="../assets/icons/html.png" alt="" loading="lazy"></i>HTML</li>
+              <li><i class="ic"><img src="../assets/icons/css.png" alt="" loading="lazy"></i>CSS</li>
+              <li><i class="ic"><img src="../assets/icons/js.png" alt="" loading="lazy"></i>JavaScript</li>
+              <li><i class="ic"><img src="../assets/icons/Bootstrap.png" alt="" loading="lazy"></i>Bootstrap</li>
+              <li><i class="ic"><img src="../assets/icons/tailwindcss.svg" alt="" loading="lazy"></i>Tailwind CSS</li>
+            </ul>
+          </article>
+
+          <article class="card card--2" data-reveal data-spot>
+            <h3 class="card__t">Apps móviles</h3>
+            <ul class="chips chips--ic">
+              <li><i class="ic"><img src="../assets/icons/flutter.svg" alt="" loading="lazy"></i>Flutter</li>
+            </ul>
+          </article>
+
+          <article class="card card--2" data-reveal data-spot>
+            <h3 class="card__t">Herramientas</h3>
+            <ul class="chips chips--ic">
+              <li><i class="ic"><img src="../assets/icons/git.svg" alt="" loading="lazy"></i>Git</li>
+              <li><i class="ic"><img src="../assets/icons/github.svg" alt="" loading="lazy"></i>GitHub</li>
+            </ul>
+          </article>
+
+          <article class="card card--2 card--learn" data-reveal data-spot>
+            <h3 class="card__t"><span class="dot"></span>Aprendiendo ahora</h3>
+            <ul class="chips chips--ic">
+              <li><i class="ic"><img src="../assets/icons/Blazor.png" alt="" loading="lazy"></i>Blazor</li>
+              <li><i class="ic"><img src="../assets/icons/ReactLogo.png" alt="" loading="lazy"></i>React</li>
+              <li><i class="ic"><img src="../assets/icons/electron.svg" alt="" loading="lazy"></i>Electron</li>
+              <li><i class="ic"><img src="../assets/icons/next-js.svg" alt="" loading="lazy"></i>Next.js</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MARQUEE GRANDE ===================== -->
+    <div class="bigmq" aria-hidden="true">
+      <div class="mq mq--big" data-marquee="60" data-dir="-1">
+        <div class="mq__group">
+          <span>Diseño</span><i>✦</i><span>Desarrollo</span><i>✦</i><span>.NET</span><i>✦</i><span>Flutter</span><i>✦</i><span>Web</span><i>✦</i><span>Apps</span><i>✦</i>
+        </div>
+      </div>
+      <div class="mq mq--big mq--outline" data-marquee="60" data-dir="1">
+        <div class="mq__group">
+          <span>Código limpio</span><i>✦</i><span>Eficiencia</span><i>✦</i><span>Calidad</span><i>✦</i><span>Aprendizaje continuo</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="contact" id="contacto">
+      <div class="wrap">
+        <p class="eyebrow" data-reveal>( 05 — Contacto )</p>
+        <h2 class="contact__title" data-chars>¿Hablamos?</h2>
+        <p class="contact__lead" data-reveal>Si tenés una idea, un sistema que mejorar o simplemente querés charlar, escribime.</p>
+
+        <div class="contact__cta" data-reveal>
+          <a href="mailto:enzobottadalmas@gmail.com" class="bigbtn" data-magnetic data-hover>
+            <span>Escribime un email</span><span class="bigbtn__a" aria-hidden="true">↗</span>
+          </a>
+          <a href="https://wa.me/59898316158?text=Hola%20Enzo!%20Vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20contactarte." target="_blank" rel="noopener" class="bigbtn bigbtn--alt" data-magnetic data-hover>
+            <span>Escribime por WhatsApp</span><span class="bigbtn__a" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <ul class="links" data-reveal>
+          <li><a href="../cv_online/index.html" target="_blank" rel="noopener" data-hover>CV online ↗</a></li>
+          <li><a href="../CV.pdf" target="_blank" rel="noopener" data-hover>CV en PDF ↗</a></li>
+          <li><a href="https://drive.google.com/drive/folders/16JoHkefXDmVdhYFFHDwD_KKhIX2GQ_xZ?usp=sharing" target="_blank" rel="noopener" data-hover>Diplomas ↗</a></li>
+          <li><a href="https://www.linkedin.com/in/enzo-botta-a52697334" target="_blank" rel="noopener" data-hover>LinkedIn ↗</a></li>
+          <li><a href="https://www.instagram.com/enzittozz/" target="_blank" rel="noopener" data-hover>Instagram ↗</a></li>
+          <li><a href="https://x.com/enzittozz_" target="_blank" rel="noopener" data-hover>X ↗</a></li>
+          <li><button type="button" data-copy="ikicraft" data-hover>Discord · @ikicraft</button></li>
+        </ul>
+      </div>
+
+      <footer class="foot">
+        <span>© 2026 Enzo Botta</span>
+        <span>Hecho a mano con HTML, CSS y JavaScript</span>
+        <a href="#hero" data-hover data-top>Volver arriba ↑</a>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="./main.js" defer></script>
+</body>
+
+</html>
