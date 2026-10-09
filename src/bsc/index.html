@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="is-loading">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSC — Soluciones Tecnológicas</title>
+  <meta name="description" content="BSC: soluciones tecnológicas desde Paysandú, Uruguay. Agentes IA, aplicaciones web y móviles, diseño, community management y soporte TI.">
+  <meta name="theme-color" content="#08080a">
+  <!-- Versión en pruebas: no indexar mientras se evalúa el rediseño -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><i></i></div>
+  <div class="cursor" aria-hidden="true"><i class="cursor__dot"></i><i class="cursor__ring"></i></div>
+
+  <!-- Preloader: persianas -->
+  <div class="pre" aria-hidden="true">
+    <div class="pre__half pre__half--t"></div>
+    <div class="pre__half pre__half--b"></div>
+    <div class="pre__inner">
+      <img src="./assets/img/BSCblanco.png" alt="" width="150" height="34">
+      <span class="pre__bar"><i></i></span>
+      <span class="pre__num">000</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#hero" class="nav__logo" data-hover aria-label="BSC — Inicio">
+      <img src="./assets/img/BSCblanco.png" alt="BSC" width="150" height="34">
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#about" data-nav="about" data-hover>Acerca</a>
+      <a href="#solutions" data-nav="solutions" data-hover>Soluciones</a>
+      <a href="#systems" data-nav="systems" data-hover>Sistemas</a>
+      <a href="#contact" data-nav="contact" data-hover>Contacto</a>
+    </nav>
+    <a class="nav__cta" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Quisiera%20un%20presupuesto%20gratis&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Presupuesto gratis</a>
+    <button class="nav__burger" type="button" aria-label="Abrir menú" aria-expanded="false" data-menu-btn><span></span><span></span></button>
+  </header>
+
+  <div class="menu" data-menu>
+    <a href="#about">Acerca</a>
+    <a href="#solutions">Soluciones</a>
+    <a href="#systems">Sistemas</a>
+    <a href="#contact">Contacto</a>
+  </div>
+
+  <main>
+
+    <!-- ===================== HERO: LAPTOP QUE SE ABRE ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero__stage">
+
+        <div class="hero__floor" aria-hidden="true"></div>
+
+        <!-- Texto previo al zoom -->
+        <div class="hero__intro">
+          <p class="eyebrow">Soluciones tecnológicas</p>
+          <p class="hero__hint"><span>Scrolleá para entrar</span><i></i></p>
+        </div>
+
+        <!-- Laptop 3D (CSS puro) -->
+        <div class="lap" aria-hidden="true">
+          <div class="lap__cam">
+            <div class="laptop">
+
+              <div class="base">
+                <div class="base__top">
+                  <div class="keys"></div>
+                  <div class="trackpad"></div>
+                  <div class="base__glow"></div>
+                </div>
+                <div class="base__front"></div>
+                <div class="base__side base__side--l"></div>
+                <div class="base__side base__side--r"></div>
+              </div>
+
+              <div class="lid">
+                <div class="lid__screen">
+                  <div class="screen__ui">
+                    <div class="ui__nav">
+                      <img src="./assets/img/BSCblanco.png" alt="" width="150" height="34">
+                      <span>Acerca</span><span>Soluciones</span><span>Sistemas</span><span>Contacto</span>
+                      <b>Presupuesto gratis</b>
+                    </div>
+                    <div class="ui__body">
+                      <small>SOLUCIONES TECNOLÓGICAS</small>
+                      <h4>Construimos la tecnología<br><em>que tu negocio necesita para crecer</em></h4>
+                      <p>Desde aplicaciones web hasta apps móviles y diseño gráfico — transformamos problemas complejos en soluciones elegantes.</p>
+                      <div class="ui__btns"><b>Presupuesto Gratis</b><u>Ver Soluciones</u></div>
+                    </div>
+                    <i class="ui__orb"></i>
+                  </div>
+                  <div class="screen__glare"></div>
+                </div>
+                <div class="lid__cover">
+                  <img src="./assets/img/BSCblanco.png" alt="" width="150" height="34">
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenido real del hero (aparece al entrar en la pantalla) -->
+        <div class="hero-real">
+          <div class="hero-real__inner">
+            <p class="eyebrow eyebrow--red">Soluciones tecnológicas</p>
+            <h1 class="hero-real__h1">
+              <span class="hero-real__a">Construimos la <span class="wave" data-wave>tecnología</span></span>
+              <span class="hero-real__b grad">que tu negocio necesita para crecer</span>
+            </h1>
+            <p class="hero-real__p">Desde aplicaciones web hasta apps móviles y diseño gráfico — transformamos problemas complejos en soluciones elegantes.</p>
+            <div class="hero-real__btns">
+              <a class="btn btn--red" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Quisiera%20un%20presupuesto%20gratis&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-magnetic data-hover>Presupuesto gratis <span aria-hidden="true">↗</span></a>
+              <a class="btn btn--ghost" href="#solutions" data-magnetic data-hover>Ver soluciones <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+          <img class="hero-real__m hero-real__m--l" src="./assets/img/autoeasy-llave.png" alt="" width="160">
+          <img class="hero-real__m hero-real__m--r" src="./assets/img/tallereasy-herramienta.png" alt="" width="160">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== ACERCA ===================== -->
+    <section class="about" id="about">
+      <div class="about__pin">
+        <div class="wrap">
+          <p class="eyebrow eyebrow--red">( 01 — Acerca de nosotros )</p>
+          <h2 class="about__title">Tu socio tecnológico en Uruguay</h2>
+          <p class="about__text" data-words>
+            Con base en Paysandú, BSC lleva <em>años entregando soluciones tecnológicas</em> para empresas de Uruguay y la región. Combinamos <em>experiencia técnica</em> con un profundo <em>conocimiento del mercado local</em>.
+          </p>
+        </div>
+      </div>
+
+      <div class="wrap">
+        <ul class="values">
+          <li class="value" data-reveal>
+            <span class="value__n">01</span>
+            <h3>Desarrollo integral</h3>
+            <p>Desde el concepto hasta el despliegue y soporte continuo.</p>
+          </li>
+          <li class="value" data-reveal>
+            <span class="value__n">02</span>
+            <h3>Enfoque en el negocio</h3>
+            <p>Resolvemos problemas reales, no solo escribimos código.</p>
+          </li>
+          <li class="value" data-reveal>
+            <span class="value__n">03</span>
+            <h3>Experiencia regional</h3>
+            <p>Conocimiento profundo del mercado uruguayo.</p>
+          </li>
+          <li class="value" data-reveal>
+            <span class="value__n">04</span>
+            <h3>Soporte confiable</h3>
+            <p>Estamos con vos mucho después del lanzamiento.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== SOLUCIONES (scroll horizontal) ===================== -->
+    <section class="solutions" id="solutions">
+      <div class="hs">
+        <div class="hs__head">
+          <p class="eyebrow eyebrow--red">( 02 — Soluciones )</p>
+          <h2 class="h-xl">Resolvemos problemas reales con tecnología</h2>
+          <p class="hs__hint" aria-hidden="true">Seguí scrolleando <span>→</span></p>
+        </div>
+
+        <div class="hs__track">
+
+          <article class="sol sol--new" data-hover>
+            <span class="sol__badge">✦ Novedad</span>
+            <span class="sol__n">01</span>
+            <svg class="sol__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 5v3M9 13h.01M15 13h.01M9 16.5h6"/><circle cx="12" cy="3.8" r="1"/></svg>
+            <p class="sol__q">¿Tu negocio podría atender y responder clientes sin parar?</p>
+            <h3 class="sol__t">Agentes IA &amp; Chatbots</h3>
+            <p class="sol__d">Desarrollamos agentes de inteligencia artificial y chatbots a medida que atienden consultas, asesoran y automatizan tareas — las 24hs, los 7 días.</p>
+            <a class="sol__a" href="https://bsc.uy/bsc-ai.html" target="_blank" rel="noopener" data-hover>Conocer BSC AI <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="sol" data-hover>
+            <span class="sol__n">02</span>
+            <svg class="sol__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+            <p class="sol__q">¿Tu equipo pierde tiempo en tareas manuales repetitivas?</p>
+            <h3 class="sol__t">Aplicaciones Web y de Escritorio</h3>
+            <p class="sol__d">Automatizamos tus procesos con software a medida construido para la forma en que realmente opera tu negocio.</p>
+            <a class="sol__a" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Me%20interesa%3A%20Aplicaciones%20Web%20y%20de%20Escritorio&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Consultar <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="sol" data-hover>
+            <span class="sol__n">03</span>
+            <svg class="sol__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>
+            <p class="sol__q">¿No aparecés donde tus clientes te buscan?</p>
+            <h3 class="sol__t">Diseño y Desarrollo Web</h3>
+            <p class="sol__d">Construimos sitios web rápidos y modernos que convierten visitantes en clientes.</p>
+            <a class="sol__a" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Me%20interesa%3A%20Dise%C3%B1o%20y%20Desarrollo%20Web&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Consultar <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="sol" data-hover>
+            <span class="sol__n">04</span>
+            <svg class="sol__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>
+            <p class="sol__q">¿Tu negocio todavía no está en el bolsillo de tus clientes?</p>
+            <h3 class="sol__t">Aplicaciones Móviles</h3>
+            <p class="sol__d">Apps para Android &amp; iOS que ponen tu marca en las manos de tus clientes, en cualquier lugar.</p>
+            <a class="sol__a" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Me%20interesa%3A%20Aplicaciones%20M%C3%B3viles&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Consultar <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="sol" data-hover>
+            <span class="sol__n">05</span>
+            <svg class="sol__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg>
+            <p class="sol__q">¿Te cuesta construir una presencia real en redes sociales?</p>
+            <h3 class="sol__t">Community Management</h3>
+            <p class="sol__d">Gestionamos y hacemos crecer tus redes sociales para que te enfoques en tu negocio.</p>
+            <a class="sol__a" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Me%20interesa%3A%20Community%20Management&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Consultar <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="sol" data-hover>
+            <span class="sol__n">06</span>
+            <svg class="sol__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 100 18c1.5 0 2-1 1.5-2.2-.5-1.3.4-2.3 1.7-2.3H18a3 3 0 003-3C21 7 17 3 12 3z"/><circle cx="8" cy="11" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="16" cy="11" r="1"/></svg>
+            <p class="sol__q">¿Tu marca está contando la historia correcta?</p>
+            <h3 class="sol__t">Diseño Gráfico y Branding</h3>
+            <p class="sol__d">Desde logos hasta campañas completas — creamos visuales que comunican tu valor.</p>
+            <a class="sol__a" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Me%20interesa%3A%20Dise%C3%B1o%20Gr%C3%A1fico%20y%20Branding&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Consultar <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="sol" data-hover>
+            <span class="sol__n">07</span>
+            <svg class="sol__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="1.5"/><rect x="3" y="14" width="18" height="6" rx="1.5"/><path d="M7 7h.01M7 17h.01"/></svg>
+            <p class="sol__q">¿Los problemas tecnológicos te cuestan tiempo y dinero?</p>
+            <h3 class="sol__t">Soporte TI e Infraestructura</h3>
+            <p class="sol__d">Mantenemos tu hardware y red funcionando para que tu equipo siempre esté productivo.</p>
+            <a class="sol__a" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Me%20interesa%3A%20Soporte%20TI%20e%20Infraestructura&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Consultar <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <div class="hs__end" aria-hidden="true"><span>Y más</span></div>
+        </div>
+      </div>
+      <div class="hs__bar" aria-hidden="true"><i></i></div>
+    </section>
+
+    <!-- ===================== SISTEMAS (escaparate) ===================== -->
+    <section class="systems" id="systems">
+      <div class="sys">
+        <div class="sys__left">
+          <p class="eyebrow eyebrow--red">( 03 — Nuestros sistemas )</p>
+          <h2 class="h-xl">Software listo para usar</h2>
+          <p class="sys__lead">Sistemas especializados que podés implementar y personalizar para tu negocio.</p>
+          <ol class="sys__list">
+            <li><button type="button" data-hover class="is-active"><span>01</span>tallerEASY</button></li>
+            <li><button type="button" data-hover><span>02</span>gestionEASY</button></li>
+            <li><button type="button" data-hover><span>03</span>ventasEASY</button></li>
+            <li><button type="button" data-hover><span>04</span>clubEASY</button></li>
+            <li><button type="button" data-hover><span>05</span>autoEASY</button></li>
+          </ol>
+        </div>
+
+        <div class="sys__stage">
+
+          <article class="panel is-active">
+            <div class="panel__art">
+              <div class="panel__tile"><img src="./assets/img/tallereasy-icon.png" alt="Logo de tallerEASY" loading="lazy"></div>
+              <img class="panel__mascot" src="./assets/img/tallereasy-herramienta.png" alt="" loading="lazy">
+            </div>
+            <div class="panel__body">
+              <h3>tallerEASY</h3>
+              <p>Sistema de gestión integral para talleres mecánicos y de servicio.</p>
+              <a class="btn btn--red" href="https://tallereasy.com/" target="_blank" rel="noopener" data-hover>Conocer más <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel__art">
+              <div class="panel__tile"><img src="./assets/img/gestionEASY.png" alt="Logo de gestionEASY" loading="lazy"></div>
+            </div>
+            <div class="panel__body">
+              <h3>gestionEASY</h3>
+              <p>Gestión integral para empresas: cuentas, pagos, ventas y más.</p>
+              <a class="btn btn--red" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Quisiera%20una%20demo%20de%20gestionEASY&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Conocer más <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel__art">
+              <div class="panel__tile"><img src="./assets/img/ventasEASY.png" alt="Logo de ventasEASY" loading="lazy"></div>
+            </div>
+            <div class="panel__body">
+              <h3>ventasEASY</h3>
+              <p>Sistema de ventas local para PC. Fácil, rápido y accesible.</p>
+              <a class="btn btn--red" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Quisiera%20una%20demo%20de%20ventasEASY&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Conocer más <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel__art">
+              <div class="panel__tile"><img src="./assets/img/clubeasy-icon.png" alt="Logo de clubEASY" loading="lazy"></div>
+            </div>
+            <div class="panel__body">
+              <h3>clubEASY</h3>
+              <p>Sistema de gestión para clubes deportivos, socios y actividades.</p>
+              <a class="btn btn--red" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Quisiera%20una%20demo%20de%20clubEASY&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Conocer más <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel__art">
+              <div class="panel__tile"><img src="./assets/img/autoEASY.png" alt="Logo de autoEASY" loading="lazy"></div>
+              <img class="panel__mascot" src="./assets/img/autoeasy-llave.png" alt="" loading="lazy">
+            </div>
+            <div class="panel__body">
+              <h3>autoEASY</h3>
+              <p>Sistema de gestión para automotoras: vehículos, clientes, ventas y publicaciones.</p>
+              <a class="btn btn--red" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!%20Quisiera%20una%20demo%20de%20autoEASY&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-hover>Conocer más <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TESTIMONIOS ===================== -->
+    <section class="testi" id="testimonials">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--red" data-reveal>( 04 — Testimonios )</p>
+        <h2 class="h-xl" data-reveal>Lo que dicen nuestros clientes</h2>
+      </div>
+
+      <div class="mq" data-marquee="34" data-dir="-1">
+        <div class="mq__group">
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“Excelente atención y comunicación. Productos y herramientas de fácil manejo y prácticos para el trabajo en la empresa.”</blockquote><figcaption><i>S</i><span><b>Sportech</b>CEO</span></figcaption></figure>
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“Super recomendado, atención de primera línea. Confiables y atentos a las necesidades de la empresa.”</blockquote><figcaption><i>A</i><span><b>AutoPlaza</b>CEO</span></figcaption></figure>
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“¡Excelente servicio y rapidez! ¡Recomiendo totalmente!”</blockquote><figcaption><i>M</i><span><b>María Noel</b>CEO, Mundo Místico</span></figcaption></figure>
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“EXCELENTE SERVICIO”</blockquote><figcaption><i>M</i><span><b>Marcos Córdoba</b>CEO, LIDEI</span></figcaption></figure>
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“¡Excelente servicio y atención!!”</blockquote><figcaption><i>F</i><span><b>Felisa Neri</b>Cliente</span></figcaption></figure>
+        </div>
+      </div>
+
+      <div class="mq" data-marquee="30" data-dir="1">
+        <div class="mq__group">
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“Excelente servicio, atención personalizada y rápida.”</blockquote><figcaption><i>E</i><span><b>Emiliano Cammarano</b>Cliente</span></figcaption></figure>
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“Gente muy seria y principalmente de confiar, eso logra mi fidelidad con la empresa y sus servicios.”</blockquote><figcaption><i>M</i><span><b>Milton Seguí</b>Cliente</span></figcaption></figure>
+          <figure class="quote quote--long"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“Conocemos al equipo de BSC desde el año 2010. A lo largo de nuestros más de 30 años en el mercado editorial, nuestra empresa depositó toda su confianza en la seriedad, responsabilidad y capacidad de innovación de BSC. Habiendo operado en gran parte de Latinoamérica, podemos asegurar que el respeto y el apoyo a sus clientes han sido incondicionales. Los alentamos a seguir adelante, innovando y cosechando el éxito que tanto han trabajado por construir.”</blockquote><figcaption><i>L</i><span><b>Luis Gustavo Bentancor</b>Director, Centro Educativo 360 Club</span></figcaption></figure>
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“De Seguro de Enfermedad Trabajadores de Paycueros estamos muy conformes con BSC — siempre atentos, con soluciones inmediatas y presupuestos. Muchos años trabajando con Sergio y su equipo. Son los mejores. Ampliamente recomendados.”</blockquote><figcaption><i>G</i><span><b>Graciela Junco</b>Seg. de Enfermedad Trab. de Paycueros</span></figcaption></figure>
+          <figure class="quote"><div class="stars" aria-label="5 estrellas">★★★★★</div><blockquote>“La verdad que chocho, contentísimo. Está buenísimo. Supera las expectativas. La verdad que funciona de diez! El sistema me elimina fácil un 70% o 80% del trabajo que hacía. Espectacular!”</blockquote><figcaption><i>G</i><span><b>Gonzalo Diego</b>CEO, Cocheras Carrasco</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CLIENTES ===================== -->
+    <section class="clients" id="clients">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--red" data-reveal>( 05 — Clientes )</p>
+        <h2 class="h-xl" data-reveal>Construyendo relaciones duraderas</h2>
+      </div>
+
+      <div class="mq" data-marquee="42" data-dir="-1" aria-hidden="true">
+        <div class="mq__group">
+          <span class="logo"><img src="./assets/img/clients/ascentConsultores.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/capitalServicios.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/carniceriaLoDelMati.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/casaCanedo.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/centroEducacional.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/ceprie.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/charlesChalkling.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/cocherasCarrasco.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/csddelfin.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/daltur.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/doblerLimpieza.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/easyRentaCar.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/efactura.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/elHombreDeHierro.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/ferreteriaPagani.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/giordanoMaquinarias.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/heroicaPlast.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/ilusor.png" alt="" loading="lazy"></span>
+        </div>
+      </div>
+
+      <div class="mq" data-marquee="38" data-dir="1" aria-hidden="true">
+        <div class="mq__group">
+          <span class="logo"><img src="./assets/img/clients/laCaserita.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/laai.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/lidei.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/limpiaPlus.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/maqsat.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/marioToscanini.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/motosRb.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/shanti.jpeg" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/pereyraHnos.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/prontoVinyl.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/salaberryTaller.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/setp.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/sportech.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/starSax.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/superMuller.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/tallerChokes.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/toremor.png" alt="" loading="lazy"></span>
+          <span class="logo"><img src="./assets/img/clients/umepay.png" alt="" loading="lazy"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EQUIPO ===================== -->
+    <section class="team" id="team">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--red" data-reveal>( 06 — Nuestro equipo )</p>
+        <h2 class="h-xl" data-reveal>Las personas detrás de BSC</h2>
+
+        <figure class="person" data-person>
+          <div class="person__img"><img src="./assets/img/Sergio-Botta.png" alt="Sergio Botta, CEO y fundador de BSC" loading="lazy"></div>
+          <figcaption>
+            <b>Sergio Botta</b>
+            <span>CEO &amp; Fundador</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===================== SOCIAL ===================== -->
+    <section class="social" id="social">
+      <div class="wrap">
+        <div class="social__card" data-reveal>
+          <div>
+            <p class="eyebrow eyebrow--red">Seguinos</p>
+            <h2 class="social__t">Lo último en <span class="grad">@bsc.uy</span></h2>
+          </div>
+          <ul class="social__links">
+            <li><a href="https://www.instagram.com/bsc.uy/" target="_blank" rel="noopener" data-hover>Instagram <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.facebook.com/BSC.UY/" target="_blank" rel="noopener" data-hover>Facebook <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://twitter.com/bsc_uy" target="_blank" rel="noopener" data-hover>X <span aria-hidden="true">↗</span></a></li>
+            <li><a href="https://www.linkedin.com/company/bsc-uy/" target="_blank" rel="noopener" data-hover>LinkedIn <span aria-hidden="true">↗</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="contact" id="contact">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--red" data-reveal>( 07 — Contacto )</p>
+        <h2 class="contact__t" data-chars>¿Listo para empezar tu proyecto?</h2>
+        <a class="bigbtn" href="https://api.whatsapp.com/send/?phone=59899740513&text=Hola%20BSC!&type=phone_number&app_absent=0" target="_blank" rel="noopener" data-magnetic data-hover>
+          <span>Hablemos</span><span class="bigbtn__a" aria-hidden="true">↗</span>
+        </a>
+      </div>
+
+      <footer class="foot">
+        <div class="wrap foot__grid">
+          <div class="foot__brand">
+            <img src="./assets/img/BSCblanco.png" alt="BSC" width="150" height="34">
+            <p>Tu socio tecnológico global. Construimos soluciones que impulsan tu negocio.</p>
+          </div>
+          <div>
+            <h4>Links rápidos</h4>
+            <ul>
+              <li><a href="#about" data-hover>Acerca</a></li>
+              <li><a href="#solutions" data-hover>Soluciones</a></li>
+              <li><a href="#systems" data-hover>Sistemas</a></li>
+              <li><a href="#contact" data-hover>Contacto</a></li>
+              <li><a href="https://bsc.uy/privacy.html" target="_blank" rel="noopener" data-hover>Privacidad</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contacto</h4>
+            <ul>
+              <li>Paysandú, Uruguay</li>
+              <li><a href="tel:+59899740513" data-hover>(+598) 099 740 513</a></li>
+              <li><a href="mailto:info@bsc.uy" data-hover>info@bsc.uy</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Seguinos</h4>
+            <ul>
+              <li><a href="https://www.instagram.com/bsc.uy/" target="_blank" rel="noopener" data-hover>Instagram</a></li>
+              <li><a href="https://www.facebook.com/BSC.UY/" target="_blank" rel="noopener" data-hover>Facebook</a></li>
+              <li><a href="https://twitter.com/bsc_uy" target="_blank" rel="noopener" data-hover>X</a></li>
+              <li><a href="https://www.linkedin.com/company/bsc-uy/" target="_blank" rel="noopener" data-hover>LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrap foot__bottom">
+          <span>© 2026 BSC. Todos los derechos reservados.</span>
+          <span>Diseñado por <a href="https://tallereasy.com/" target="_blank" rel="noopener" data-hover>tallerEASY</a></span>
+          <a href="#hero" data-hover>Volver arriba ↑</a>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="./main.js" defer></script>
+</body>
+
+</html>
