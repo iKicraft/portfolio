@@ -120,8 +120,9 @@ main {
 .h-xl {
   font-family: var(--ff-d);
   font-weight: 800;
-  font-size: clamp(2.4rem, calc((100vw - 2 * var(--pad)) / 8.6), 10rem);
-  line-height: 0.9;
+  font-size: clamp(1.7rem, calc((100vw - 2 * var(--pad)) / 11.5), 6.5rem);
+  line-height: 0.95;
+  white-space: nowrap;
   letter-spacing: -0.04em;
   text-transform: uppercase;
   margin: 18px 0 clamp(36px, 6vw, 80px);
@@ -787,7 +788,7 @@ html.menu-open .menu {
   position: relative;
   display: grid;
   grid-template-columns: 70px minmax(0, 1.1fr) minmax(0, 1.2fr) 40px;
-  gap: 24px;
+  gap: 32px;
   align-items: center;
   padding: clamp(24px, 3.4vw, 44px) 8px;
   border-bottom: 1px solid var(--line);
@@ -825,15 +826,17 @@ html.menu-open .menu {
 .svc__t {
   font-family: var(--ff-d);
   font-weight: 800;
-  font-size: clamp(1.8rem, 4.2vw, 3.8rem);
+  font-size: clamp(1.3rem, 2.4vw, 2.3rem);
   letter-spacing: -0.03em;
-  line-height: 1;
+  line-height: 1.05;
   text-transform: uppercase;
+  min-width: 0;
 }
 
 .svc__d {
   color: var(--muted);
   max-width: 30em;
+  min-width: 0;
 }
 
 .svc__a {
@@ -938,7 +941,7 @@ html.menu-open .menu {
 .scene__big {
   font-family: var(--ff-d);
   font-weight: 800;
-  font-size: clamp(4rem, calc((100vw - 2 * var(--pad)) / 5.6), 15rem);
+  font-size: clamp(3.2rem, calc((100vw - 2 * var(--pad)) / 6.4), 11rem);
   line-height: 0.84;
   letter-spacing: -0.045em;
   text-transform: uppercase;
@@ -976,7 +979,7 @@ html.menu-open .menu {
   line-height: 1;
   letter-spacing: -0.06em;
   color: transparent;
-  -webkit-text-stroke: 1.5px hsla(var(--h), 100%, 80%, 0.22);
+  -webkit-text-stroke: 1.5px hsla(var(--h), 100%, 80%, 0.13);
   will-change: transform;
   user-select: none;
 }
@@ -1050,6 +1053,7 @@ html.menu-open .menu {
 
 .scene__body {
   min-width: 0;
+  container-type: inline-size;
   display: grid;
   gap: 16px;
   justify-items: start;
@@ -1071,8 +1075,9 @@ html.menu-open .menu {
 .scene__title {
   font-family: var(--ff-d);
   font-weight: 800;
-  font-size: clamp(2.3rem, 5.4vw, 4.8rem);
-  line-height: 0.95;
+  font-size: clamp(1.3rem, 7.2cqw, 3.4rem);
+  line-height: 1;
+  max-width: 100%;
   letter-spacing: -0.035em;
   text-transform: uppercase;
 }
@@ -1316,7 +1321,7 @@ html.menu-open .menu {
 .contact__title {
   font-family: var(--ff-d);
   font-weight: 800;
-  font-size: clamp(2.6rem, calc((100vw - 2 * var(--pad)) / 11.4), 15rem);
+  font-size: clamp(1.6rem, calc((min(100vw, 1240px) - 2 * var(--pad)) / 11.6), 7.5rem);
   line-height: 0.88;
   letter-spacing: -0.05em;
   white-space: nowrap;
@@ -1495,7 +1500,7 @@ html.menu-open .menu {
 }
 
 @media (max-width: 560px) {
-  .scene__title { font-size: clamp(1.6rem, 7.6vw, 2.4rem); }
+  .svc__t { font-size: 1.1rem; }
   .scene__text { font-size: 0.95rem; }
   .hero__bottom { gap: 14px; }
   .scrollcue span:last-child { display: none; }

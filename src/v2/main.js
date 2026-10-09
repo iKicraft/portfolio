@@ -512,10 +512,15 @@
   const tl = gsap.timeline({ defaults: { ease: 'none' } });
   scenes.forEach((s, i) => {
     const ghost = $('.scene__ghost', s);
-    if (i > 0) tl.fromTo(s, { scale: 0.45, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.4, ease: 'power2.out' }, i - 0.4);
+    // Entrada: la escena llega desde el fondo, justo cuando la anterior ya casi se fue
+    if (i > 0) tl.fromTo(s, { scale: 0.7, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.3, ease: 'power2.out' }, i - 0.3);
     else gsap.set(s, { scale: 1, autoAlpha: 1 });
-    if (i < N - 1) tl.to(s, { scale: 2.2, autoAlpha: 0, duration: 0.4, ease: 'power2.in' }, i + 0.6);
-    if (ghost) tl.fromTo(ghost, { scale: 0.65 }, { scale: 1.6, duration: 1.4 }, i - 0.4);
+    // Salida: se acerca a la cámara y se desvanece rápido para no tapar a la siguiente
+    if (i < N - 1) {
+      tl.to(s, { scale: 1.5, duration: 0.4, ease: 'power2.in' }, i + 0.6);
+      tl.to(s, { autoAlpha: 0, duration: 0.25, ease: 'power1.in' }, i + 0.6);
+    }
+    if (ghost) tl.fromTo(ghost, { scale: 0.7 }, { scale: 1.4, duration: 1.3 }, i - 0.3);
   });
   tl.to({}, { duration: 0.6 }, N - 1);
 
